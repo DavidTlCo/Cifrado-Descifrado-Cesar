@@ -48,11 +48,16 @@ body{
     text-align: center;
     text-transform: uppercase;
 }
+label{
+    color: var(--text-light);
+    padding: 0 15px;
+    font-size: 0.9rem;
+}
 .btn{
     display: block;
     margin: 25px auto;
     width: 50%;
-    padding: 10px 0;
+    padding: 7px 0;
     border: 1px solid var(--green-primary);
     border-radius: 15px;
     background-color: var(--green-primary);
@@ -73,6 +78,16 @@ textarea{
     outline: none;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
+}
+.form-group{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-control{
+    outline: none;
+    padding: 8px;
+    border-radius: 10px;
 }
 .footer{
     width: 100%;

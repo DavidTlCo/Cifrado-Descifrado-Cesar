@@ -15,7 +15,11 @@
                 <h3 class="subtitle">Cifrado</h3>
                 <h4 class="tag">Texto llano:</h4>
                 <textarea name="plain_text" id="" cols="30" rows="7" placeholder="Texto a cifrar" size="100"></textarea>
-                <button class="btn" id="encrypt">Cifrar</button>
+                <div class="form-group">
+                    <label for="sifht_encrypt">Corrimientos: </label>
+                    <input type="number" class="form-control" id="sifht_encrypt" max="256" min="0">
+                    <button class="btn" id="encrypt">Cifrar</button>
+                </div>
                 <h4 class="tag">Texto cifrado</h4>
                 <textarea name="plain_text" id="" cols="30" rows="7" readonly></textarea>
             </div>
@@ -23,7 +27,11 @@
                 <h3 class="subtitle">Descifrado</h3>
                 <h4 class="tag">Texto cifrado:</h4>
                 <textarea name="plain_text" id="" cols="30" rows="7" placeholder="Texto a descifrar" size="100"></textarea>
-                <button class="btn" id="decrypt">Descifrar</button>
+                <div class="form-group">
+                    <label for="sifht_decrypt">Corrimientos: </label>
+                    <input type="number" class="form-control" id="sifht_decrypt" max="256" min="0">
+                    <button class="btn" id="decrypt">Descifrar</button>
+                </div>
                 <h4 class="tag">Texto descifrado</h4>
                 <textarea name="plain_text" id="" cols="30" rows="7" readonly></textarea>
             </div>
@@ -36,5 +44,6 @@
             <p>Otoño 2021</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
