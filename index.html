@@ -4,46 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d4425b4c8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Cifrado de Céssar</title>
 </head>
 <body>
     <main>
-        <h2 class="title">Cifrado y Descifrado de César</h2>
+        <h2 class="title"><i class="fas fa-fingerprint"></i>Cifrado y Descifrado de César</h2>
         <div class="container">
             <div  class="container-fluid">
                 <h3 class="subtitle">Cifrado</h3>
                 <h4 class="tag">Texto llano:</h4>
-                <textarea name="plain_text" id="" cols="30" rows="7" placeholder="Texto a cifrar" size="100"></textarea>
+                <textarea name="" id="encrypt_text" cols="30" rows="5" placeholder="Texto a cifrar" size="100"></textarea>
                 <div class="form-group">
-                    <label for="sifht_encrypt">Corrimientos: </label>
-                    <input type="number" class="form-control" id="sifht_encrypt" max="256" min="0">
-                    <button class="btn" id="encrypt">Cifrar</button>
+                    <label for="shift_encrypt" class="shift">Corrimientos: </label>
+                    <input type="number" class="form-control" id="shift_encrypt" max="256" min="0">
+                    <button class="btn" id="encrypt"><i class="fas fa-lock"></i>Cifrar</button>
                 </div>
                 <h4 class="tag">Texto cifrado</h4>
-                <textarea name="plain_text" id="" cols="30" rows="7" readonly></textarea>
+                <textarea name="" id="encrypt_encrypt" cols="30" rows="5" readonly></textarea>
             </div>
             <div  class="container-fluid">
                 <h3 class="subtitle">Descifrado</h3>
                 <h4 class="tag">Texto cifrado:</h4>
-                <textarea name="plain_text" id="" cols="30" rows="7" placeholder="Texto a descifrar" size="100"></textarea>
+                <textarea name="" id="decrypt_encrypt" cols="30" rows="5" placeholder="Texto a descifrar" size="100"></textarea>
                 <div class="form-group">
-                    <label for="sifht_decrypt">Corrimientos: </label>
-                    <input type="number" class="form-control" id="sifht_decrypt" max="256" min="0">
-                    <button class="btn" id="decrypt">Descifrar</button>
+                    <label for="shift_decrypt" class="shift">Corrimientos de cifrado: </label>
+                    <input type="number" class="form-control" id="shift_decrypt" max="256" min="0">
+                    <button class="btn" id="decrypt"><i class="fas fa-lock-open"></i>Descifrar</button>
                 </div>
                 <h4 class="tag">Texto descifrado</h4>
-                <textarea name="plain_text" id="" cols="30" rows="7" readonly></textarea>
+                <textarea name="" id="decrypt_text" cols="30" rows="5" readonly></textarea>
             </div>
         </div>
+        <input type="reset" value="Limpiar" class="btn btn-reset" id="reset">
     </main>
-    <footer class="footer">
+    <div class="footer">
         <div>
             <p>Práctica 01 - Seguridad de redes - Criptografía</p>
             <p>Todos los derechos reservados a <span class="author">David Tlahuapa Coraza</span>.</p>
             <p>Otoño 2021</p>
         </div>
-    </footer>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
