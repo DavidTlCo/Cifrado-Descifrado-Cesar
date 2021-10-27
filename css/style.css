@@ -36,7 +36,7 @@ body{
     text-align: start;
     color: var(--green-primary);
     margin: 15px 0;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 .container{
     width: 90%;
@@ -126,11 +126,16 @@ textarea{
 }
 
 @media screen and (max-width: 890px){
+    .title{
+        font-size: 1.1rem;
+    }
     .form-group{
         display: block;
     }
     .shift{ 
         text-align: center;
+        width: 100%;
+        font-size: 0.6rem;
     }
     .form-control, label{
         display: block;
@@ -141,5 +146,14 @@ textarea{
     }
     .footer{
         position: relative;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    *{
+        font-size: 0.7rem;
+    }
+    .btn{
+        min-width: 90px;
     }
 }

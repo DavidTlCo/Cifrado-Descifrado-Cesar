@@ -1,4 +1,4 @@
-const alpha = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+const alpha = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜø£Ø×ƒáíóúñÑªº¿®¬½¼¡«»░▒▓│┤ÁÂÀ©╣║╗╝¢¥┐└┴┬├─┼ãÃ╚╔╩╦╠═╬¤ðÐÊËÈıÍÎÏ┘┌█▄¦Ì▀ÓßÔÒõÕµþÞÚÛÙýÝ¯­±‗¾¶§÷¸°¨·¹³²■ ";
 const size = [...alpha].length;
 
 const reset = () => {
@@ -46,9 +46,7 @@ const decrypt = (e) =>{
 
 const cesar = (text, shift) => {
     let result = "";
-    console.log("des: "+shift+"size: "+size);
     shift = (shift % size + size) % size;
-    console.log("des: "+shift);
     for (let i = 0; i<text.length; i++) {
         if( alpha.indexOf(text[i])!=-1 ){
             let position = ((alpha.indexOf(text[i])+shift) % size);
@@ -60,7 +58,7 @@ const cesar = (text, shift) => {
 }
     
 const init = () => {
-        document.getElementById('encrypt').addEventListener('click', encrypt);
+    document.getElementById('encrypt').addEventListener('click', encrypt);
     document.getElementById('decrypt').addEventListener('click', decrypt);
     document.getElementById('reset').addEventListener('click', reset);
 }
